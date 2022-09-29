@@ -14,15 +14,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <script src="https://kit.fontawesome.com/fc5e55e120.js" crossorigin="anonymous"></script>
-        <link type="text/css" href="view/css/style.css" rel="stylesheet"/>
-        <title><?= $pageTitle ?></title>
+        <?php require_once 'snippets/htmlHead.php'; ?>
     </head>
     <body>
         <?php include_once('snippets/header.php') ?>
         <main>
-            <div class="container" ?>
+            <div class="container">
                 <?php
                     if (!empty($errorMessage)): ?>
                         <div class="errorMessage">
