@@ -9,6 +9,7 @@
      */
 
     $pageTitle ??= 'Welcome Page';
+    $userInfo = isset($_SESSION['userInfo']) ? json_decode($_SESSION['userInfo']) : new stdClass();
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@
             <div class="container">
                 <h1>Successful Sign In!!</h1>
                 <p>
-                    Welcome, <?= $user->firstName ?? 'Nobody' ?> <?= $user->lastName ?? 'Nobody' ?> to the page.
+                    Welcome, <?= $userInfo->firstName ?? 'Nobody' ?> <?= $userInfo->lastName ?? 'Nobody' ?> to the page.
                 </p>
             </div>
         </main>

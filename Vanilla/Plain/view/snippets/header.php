@@ -10,13 +10,13 @@
      */
 
     $pageTitle ??= "Some Page Title";
-
+    $userInfo = isset($_SESSION['userInfo']) ? json_decode($_SESSION['userInfo']) : new stdClass();
 ?>
 <header>
     <div class="pageTitle"><h2><?php echo $pageTitle; ?></h2></div>
     <div class="userStuff">
-        <?php if (!empty($_SESSION['userName'])): ?>
-            <div class="welcome">Welcome, <?php echo $_SESSION['userInfo'] ?? 'No User' ?></div>
+        <?php if (!empty($_SESSION['logTime'])): ?>
+            <div class="welcome">Welcome, <?php echo $userInfo->firstName ?? 'No User' ?></div>
             <div class="userInfo">
                 <div id="iconUserMenu">
                     <i class="fa-regular fa-circle-user fa-fw fa-2xl"></i>

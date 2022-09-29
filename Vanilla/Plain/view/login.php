@@ -9,6 +9,7 @@
      */
 
     $pageTitle ??= 'Login Page';
+    $errorMessage = $_SESSION['errorMessage'] ?? null;
 ?>
 
 <!DOCTYPE html>
@@ -31,17 +32,17 @@
                 <div>
                     Provide your email address and password
                 </div>
-                <form action="login.php" method="post" onSubmit="return validate();">
+                <form action="process.php" method="post">
                     <div class="inputGroup">
                         <label for="email">Email address</label>
-                        <input type="email" id="email" placeholder="Email"/>
+                        <input type="email" id="email" name="email" placeholder="Email"/>
                     </div>
                     <div class="inputGroup">
                         <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Password"/>
+                        <input type="password" id="password" name="password" placeholder="Password"/>
                     </div>
                     <div class="buttonGroup">
-                        <input type="submit" id="btnLogin" value="Log In"/>
+                        <input type="submit" id="btnLogin" name="login" value="Log In"/>
                     </div>
                 </form>
                 <div>
@@ -50,15 +51,6 @@
             </div>
         </main>
         <?php include_once('snippets/footer.php') ?>
-
-        <script>
-            function validate() {
-
-                var form = document.getElementById('login');
-
-                return true;
-            }
-        </script>
     </body>
 </html>
 

@@ -9,6 +9,10 @@
 
     session_start();
 
+    if (isset($_GET['signout'])) {
+        session_unset();
+    }
+
     if (empty($_SESSION['userInfo'])):
         require_once './view/login.php';
     else:
