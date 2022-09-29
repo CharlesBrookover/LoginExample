@@ -1,0 +1,160 @@
+html, body {
+    font-family: Arial, sans-serif, "Times New Roman";
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vw;
+}
+
+/*
+    Top header bar
+ */
+header {
+    display: flex;
+    width: 100%;
+    background-color: lightgray;
+    height: 3rem;
+    margin: 0;
+    align-items: stretch;
+}
+
+header .pageTitle {
+    margin: 1rem;
+    padding: .25rem;
+    align-self: center;
+}
+
+header .userStuff {
+    margin: 1rem;
+    padding: .25rem;
+    align-self: center;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+header .userStuff .welcome {
+    margin: 0 1rem;
+    padding: .25rem;
+    align-self: center;
+}
+
+header .userStuff .userInfo {
+    margin: 0 1rem;
+    padding: .25rem;
+    align-self: center;
+    width: 100px;
+    display: flex;
+    justify-content: end;
+}
+
+/*
+    Dropdown for user preferences/signout
+ */
+#iconUserMenu {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#iconUserMenu .userMenu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+    min-width: 100px;
+    background-color: #f9f9f9;
+    right: 0;
+    top: 1.5rem;
+}
+
+#iconUserMenu:hover .userMenu {
+    display: block;
+}
+
+.userMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.userMenu ul li {
+    margin: 1rem;
+    padding: .5rem;
+}
+
+.userMenu a {
+    text-decoration: none;
+    color: black;
+}
+
+/*
+    Main section
+ */
+main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+main .errorMessage {
+    background-color: #f0c0c0;
+    box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+
+/*
+    Form items
+ */
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    min-width: 15%;
+}
+
+.inputGroup label {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.inputGroup input {
+    height: 1.5rem;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: center;
+    margin: .5rem;
+}
+.buttonGroup input, .buttonGroup button {
+    font-size: 1.1rem;
+    padding: .5rem;
+    border: none;
+    background-color: lightblue;
+}
+/*
+    Footer Section
+ */
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 2rem 0 0 0;
+}

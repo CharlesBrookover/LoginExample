@@ -1,0 +1,14 @@
+{
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Charles Brookover",
+      "email": "charlesbrookover@gmail.com",
+      "role": "Developer",
+      "homepage": "https://www.landfillsoft.top"
+    }
+  ],
+  "require": {
+    "php": ">=8"
+  }
+}
