@@ -9,7 +9,7 @@
      */
 
     $pageTitle ??= 'Welcome Page';
-    $userInfo = isset($_SESSION['userInfo']) ? json_decode($_SESSION['userInfo']) : new stdClass();
+$userInfo = $_SESSION['userInfo'] ?? new stdClass();
 ?>
 
 <!DOCTYPE html>

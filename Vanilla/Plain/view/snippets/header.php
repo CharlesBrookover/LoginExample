@@ -10,7 +10,7 @@
      */
 
     $pageTitle ??= "Some Page Title";
-    $userInfo = isset($_SESSION['userInfo']) ? json_decode($_SESSION['userInfo']) : new stdClass();
+$userInfo = $_SESSION['userInfo'] ?? new stdClass();
 ?>
 <header>
     <div class="pageTitle"><h2><?php echo $pageTitle; ?></h2></div>

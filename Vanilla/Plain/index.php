@@ -20,4 +20,4 @@
     endif;
 
 
-echo print_r($_SESSION, true);
+var_dump($_SESSION);
