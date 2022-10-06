@@ -1,15 +1,15 @@
 <?php
-    /**
-     * Successful login
-     *
-     * @author Charles Brookover
-     *
-     * @property stdClass|null $user      User info
-     * @property string|null   $pageTitle Title of the page
-     */
+/**
+ * Successful login
+ *
+ * @author Charles Brookover
+ *
+ * @property stdClass|null $user      User info
+ * @property string|null   $pageTitle Title of the page
+ */
 
-    $pageTitle ??= 'Welcome Page';
-$userInfo = $_SESSION['userInfo'] ?? new stdClass();
+$pageTitle ??= 'Welcome Page';
+$userInfo  = $_SESSION['userInfo'] ?? new stdClass();
 ?>
 
 <!DOCTYPE html>

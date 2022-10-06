@@ -1,15 +1,15 @@
 <?php
-    /**
-     * Login page
-     *
-     * @author Charls Brookover
-     *
-     * @property string|null $errorMessage Any error message from the login
-     * @property string|null $pageTitle    The title of the page
-     */
+/**
+ * Login page
+ *
+ * @author Charls Brookover
+ *
+ * @property string|null $errorMessage Any error message from the login
+ * @property string|null $pageTitle    The title of the page
+ */
 
-    $pageTitle ??= 'Login Page';
-    $errorMessage = $_SESSION['errorMessage'] ?? null;
+$pageTitle    ??= 'Login Page';
+$errorMessage = $_SESSION['errorMessage'] ?? null;
 ?>
 
 <!DOCTYPE html>
@@ -22,12 +22,12 @@
         <main>
             <div class="container">
                 <?php
-                    if (!empty($errorMessage)): ?>
-                        <div class="errorMessage">
-                            <i class="fa-solid fa-fw fa-lg fa-triangle-exclamation"></i>
-                            <span><?= $errorMessage ?></span>
-                        </div>
-                    <?php endif;
+                if (!empty($errorMessage)): ?>
+                    <div class="errorMessage">
+                        <i class="fa-solid fa-fw fa-lg fa-triangle-exclamation"></i>
+                        <span><?= $errorMessage ?></span>
+                    </div>
+                <?php endif;
                 ?>
                 <div>
                     Provide your email address and password
@@ -35,14 +35,14 @@
                 <form action="process.php" method="post">
                     <div class="inputGroup">
                         <label for="email">Email address</label>
-                        <input type="email" id="email" name="email" placeholder="Email"/>
+                        <input type="email" id="email" name="email" placeholder="Email" />
                     </div>
                     <div class="inputGroup">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Password"/>
+                        <input type="password" id="password" name="password" placeholder="Password" />
                     </div>
                     <div class="buttonGroup">
-                        <input type="submit" id="btnLogin" name="login" value="Log In"/>
+                        <input type="submit" id="btnLogin" name="login" value="Log In" />
                     </div>
                 </form>
                 <div>

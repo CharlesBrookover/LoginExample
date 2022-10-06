@@ -1,27 +1,28 @@
 /*
-  Form Validation
+ Form Validation
  */
 const validate = (event) => {
-  event.preventDefault()
-  const elements = event.target.elements
-  let valid = requiredValues(elements)
+  event.preventDefault();
+  const elements = event.target.elements;
+  let valid = requiredValues(elements);
   if (!valid) {
-    console.log('Required Fields Not Completed')
-  } else {
-    valid = comparePassword(elements)
+    console.log('Required Fields Not Completed');
+  }
+  else {
+    valid = comparePassword(elements);
     if (!valid) {
-      console.log('Passwords Not Matching')
+      console.log('Passwords Not Matching');
     }
   }
 
-  return valid
-}
+  return valid;
+};
 
 const passwordValidate = (event) => {
-  event.preventDefault()
+  event.preventDefault();
 
-  return comparePassword(event.target.elements)
-}
+  return comparePassword(event.target.elements);
+};
 
 /**
  *
@@ -29,37 +30,39 @@ const passwordValidate = (event) => {
  * @returns {boolean}
  */
 const requiredValues = (elements) => {
-  let valid = true
-  const required = Array.from(elements).filter(item => item.hasAttribute('required'))
+  let valid = true;
+  const required = Array.from(elements).filter(item => item.hasAttribute('required'));
   for (const element of required) {
     if (element.value.trim().length === 0) {
-      valid = false
+      valid = false;
     }
   }
 
-  return valid
-}
+  return valid;
+};
 
 const comparePassword = (elements) => {
-  let valid = true
-  const password = elements['password'] ?? null
+  let valid = true;
+  const password = elements['password'] ?? null;
   if (password) {
-    const minLength = password.getAttribute('minLength')
+    const minLength = password.getAttribute('minLength');
     if (minLength && password.value.trim().length < minLength) {
-      valid = false
-    } else {
-      const confirmPassword = elements['confirmPassword'] ?? null
+      valid = false;
+    }
+    else {
+      const confirmPassword = elements['confirmPassword'] ?? null;
       if (confirmPassword) {
         if (password.value.trim() !== confirmPassword.value.trim()) {
-          valid = false
+          valid = false;
         }
-      } else {
-        valid = false
+      }
+      else {
+        valid = false;
       }
     }
   }
 
-  return valid
-}
+  return valid;
+};
 
 

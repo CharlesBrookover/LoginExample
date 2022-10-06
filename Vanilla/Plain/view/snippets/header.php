@@ -1,16 +1,16 @@
 <?php
 
-    /**
-     *  Header for the login page
-     *
-     * @author Charles Brookover
-     *
-     * @property string $pageTitle   Title of the page
-     * @property string $userName    The name of the user
-     */
+/**
+ *  Header for the login page
+ *
+ * @author Charles Brookover
+ *
+ * @property string $pageTitle   Title of the page
+ * @property string $userName    The name of the user
+ */
 
-    $pageTitle ??= "Some Page Title";
-$userInfo = $_SESSION['userInfo'] ?? new stdClass();
+$pageTitle ??= "Some Page Title";
+$userInfo  = $_SESSION['userInfo'] ?? new stdClass();
 ?>
 <header>
     <div class="pageTitle"><h2><?php echo $pageTitle; ?></h2></div>
