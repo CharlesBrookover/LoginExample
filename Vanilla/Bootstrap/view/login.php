@@ -4,7 +4,7 @@
  *
  * @author Charls Brookover
  *
- * @property string|null $errorMessage Any error message from the login
+ * @property string|null $errorMessage Any error message from the login.db
  * @property string|null $pageTitle    The title of the page
  */
 

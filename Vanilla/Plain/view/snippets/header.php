@@ -1,7 +1,7 @@
 <?php
 
 /**
- *  Header for the login page
+ *  Header for the login.db page
  *
  * @author Charles Brookover
  *

@@ -1,8 +1,8 @@
 <?php
     /**
-     * A simple login page
+     * A simple login.db page
      *
-     * This page uses basic PHP and Vanilla JS to perform a login and a user preferences page.
+     * This page uses basic PHP and Vanilla JS to perform a login.db and a user preferences page.
      *
      * @author Charles Brookover
      */

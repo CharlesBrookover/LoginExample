@@ -1,6 +1,6 @@
 <?php
 /**
- * Successful login
+ * Successful login.db
  *
  * @author Charles Brookover
  *

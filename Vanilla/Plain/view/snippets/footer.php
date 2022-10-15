@@ -1,6 +1,6 @@
 <?php
 /**
- * Footer for the login pages
+ * Footer for the login.db pages
  *
  * @author Charles Brookover
  *

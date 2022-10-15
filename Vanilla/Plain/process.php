@@ -1,15 +1,15 @@
 <?php
 /**
- * Process the login process and new user creation
+ * Process the login.db process and new user creation
  *
  * @author Charles Brookover
  */
 
 session_start();
 
-if (isset($_POST['login'])) {
+if (isset($_POST['login.db'])) {
     $password = $_POST['password'];
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $email    = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['errorMessage'] = 'Invalid Email Address';
@@ -23,7 +23,7 @@ if (isset($_POST['login'])) {
         exit();
     }
 
-    // Process login
+    // Process login.db
     session_unset();
     $_SESSION['logTime'] = date('c');
     $userInfo = saveUserInfo(['firstName' => 'C', 'lastName' => 'B', 'city' => 'M', 'age' => 4, 'email' => $email]);
