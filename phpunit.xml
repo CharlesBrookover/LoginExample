@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit colors="true"
+         convertDeprecationsToExceptions="true"
+         convertWarningsToExceptions="true"
+         testdox="true"
+         bootstrap="tests/bootstrap.php">
+    <testsuites>
+        <testsuite name="all">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <coverage>
+        <include>
+            <directory suffix=".php">src/lib</directory>
+        </include>
+    </coverage>
+</phpunit>

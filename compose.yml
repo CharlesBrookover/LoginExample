@@ -1,0 +1,9 @@
+services:
+  plain_vanilla:
+    image: local/php:8-apache
+    container_name: plain_vanilla
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./Plain/Vanilla:/var/www/html
+      - ./login.db:/var/www/html/data/login.db

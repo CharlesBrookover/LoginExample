@@ -207,3 +207,4 @@ dist
 /cache/
 /config/development/
 
+/src/vendor/
